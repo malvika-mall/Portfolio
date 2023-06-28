@@ -1368,6 +1368,11 @@ ul.icons li {
 			#header nav ul li {
 				padding-left: 0;
 				border-left: solid 1px #ffffff;
+
+				@media only screen and (max-width: 860px) {
+					width: 100%;
+				}
+				
 			}
 
 				#header nav ul li:first-child {
@@ -1833,6 +1838,7 @@ input, select, textarea {
 	strong, b {
 		color: #ffffff;
 		font-weight: 600;
+		white-space: break-spaces;
 	}
 
 	em, i {
@@ -2361,6 +2367,8 @@ input, select, textarea {
 
 			.image.fit img {
 				width: 100%;
+				white-space: break-spaces;
+				max-width: 100%;
 			}
 
 		.image.main {
@@ -3007,6 +3015,7 @@ input, select, textarea {
 		#header nav {
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 ul {
@@ -3021,17 +3030,32 @@ li {
   margin-right: 20px;
 }
 
+.container {
+	display: flex;
+	align-items: flex-start;
+
+	@media only screen and (max-width: 860px) {
+		flex-direction: column;
+	}
+  }
+  
+  .image-container {
+	margin-right: 20px; /* Adjust the margin value as needed */
+  }
+  
+  .image-container img {
+	width: 100%;
+	height: auto;
+	align-self: flex-start;
+  }
+
+
 @media screen and (max-width: 480px) {
   li {
     margin-right: 10px;
     margin-bottom: 10px;
-    white-space: nowrap;
   }
   
-  li:first-child,
-  li:nth-child(2) {
-    flex-basis: 100%;
-  }
 }
 
 
@@ -3165,6 +3189,7 @@ li {
 					flex-direction: column;
 					min-width: 10rem;
 					max-width: 100%;
+					width: 100%;
 				}
 
 					#header nav ul li {
